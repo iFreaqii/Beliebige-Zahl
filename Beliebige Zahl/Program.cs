@@ -14,9 +14,8 @@ namespace Beliebige_Zahl
         static void Main(string[] args)
         {
             double zahl;
-            bool groeßer0;
-            bool gleich0;
-            bool gerade;
+            int gerade;
+            
             string weitermachen = "";
 
             do
@@ -25,42 +24,35 @@ namespace Beliebige_Zahl
                 zahl = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Ihre Zahl lautet: {0}", zahl);
 
-                groeßer0 = zahl > 0 ? false : zahl < 0 ? false : true;
-                gleich0 = zahl > 0 ? true : false;
+                gerade = zahl % 0;
 
-                if (!gleich0)
+               if (zahl < 0)
                 {
-                    gerade = zahl % 2 == 0 ? true : false;
-
-                    if (groeßer0)
+                    if(gerade = 0)
                     {
-                        Console.WriteLine("Der angegebene Wert ist groesser als Null.\n");
-                        if (gerade)
-                        {
-                            Console.WriteLine("Der angegebene Wert ist gerade.\n");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Der angegebene Wert ist ungerade.\n");
-                        }
+                     Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und gerade", zahl);
                     }
-                    else
+                    else(gerade !=0)
                     {
-                        Console.WriteLine("Der angegebene Wert ist kleiner als Null.\n");
-                        if (gerade)
-                        {
-                            Console.WriteLine("Der angegebene Wert ist gerade.\n");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Der angegebene Wert ist ungerade.\n");
-                        }
+                     Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und ungerade", zahl);
                     }
                 }
-                else
+               else (zahl = 0)
                 {
-                    Console.WriteLine("Der angegebene Wert ist Null.\n");
+                 Console.WriteLine("Sie haben eine 0 eingegeben.")
                 }
+               else (zahl > 0)
+                {
+                 if(gerade = 0)
+                    {
+                     Console.WriteLine("Ihre eingegebene Zahl {0} ist größer als 0 und gerade", zahl);
+                    }
+                    else(gerade !=0)
+                    {
+                     Console.WriteLine("Ihre eingegebene Zahl {0} ist größer als 0 und ungerade", zahl);
+                    }
+                }
+               
 
                 Console.WriteLine("\nGeben Sie bitte (j) ein, um eine weitere Zahl einzugeben!");
                 weitermachen = Console.ReadLine();
