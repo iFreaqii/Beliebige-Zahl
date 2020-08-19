@@ -26,33 +26,31 @@ namespace Beliebige_Zahl
 
                 gerade = zahl % 0;
 
-               if (zahl < 0)
+                if ((zahl < 0) && (gerade =0))
                 {
-                    if(gerade = 0)
-                    {
-                     Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und gerade", zahl);
-                    }
-                    else(gerade !=0)
-                    {
-                     Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und ungerade", zahl);
-                    }
+                    Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und gerade", zahl);
                 }
-               else (zahl = 0)
+
+                else if ((zahl <0)(gerade != 0))
                 {
-                 Console.WriteLine("Sie haben eine 0 eingegeben.")
+                    Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und ungerade", zahl);
                 }
-               else (zahl > 0)
+                       
+                else if ((zahl > 0)(gerade=0))
+                {                   
+                    Console.WriteLine("Ihre eingegebene Zahl {0} ist größer als 0 und gerade", zahl);
+                }
+
+                else if((zahl > 0)(gerade != 0))
                 {
-                 if(gerade = 0)
-                    {
-                     Console.WriteLine("Ihre eingegebene Zahl {0} ist größer als 0 und gerade", zahl);
-                    }
-                    else(gerade !=0)
-                    {
-                     Console.WriteLine("Ihre eingegebene Zahl {0} ist größer als 0 und ungerade", zahl);
-                    }
+                    Console.WriteLine("Ihre eingegebene Zahl {0} ist größer als 0 und ungerade", zahl);
                 }
-               
+
+                else (zahl = 0) ;
+                {
+                    Console.WriteLine("Sie haben eine 0 eingegeben.");
+                }
+
 
                 Console.WriteLine("\nGeben Sie bitte (j) ein, um eine weitere Zahl einzugeben!");
                 weitermachen = Console.ReadLine();
