@@ -31,7 +31,7 @@ namespace Beliebige_Zahl
                     Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und gerade", zahl);
                 }
 
-                else if ((zahl <0) &&(gerade != 0))
+                else if ((zahl < 0) && (gerade != 0))
                 {
                     Console.WriteLine("Ihre eingegebene Zahl {0} ist kleiner als 0 und ungerade", zahl);
                 }
